@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_5/wiget.dart';
 
+// PageTwo represents the second page of the application.
 class PageTwo extends StatelessWidget {
   const PageTwo({super.key});
 
@@ -22,6 +23,7 @@ class PageTwo extends StatelessWidget {
               ),
               child: Column(
                 children: [
+                  // "Sign up as" heading
                   const Padding(
                     padding: EdgeInsets.only(top: 50),
                     child: Text(
@@ -33,22 +35,25 @@ class PageTwo extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
+                  // First SignUp Widget for "customer"
                   const SignUpWiget(
-                      icon: Icons.person_sharp,
-                      text: "customer",
-                      text2:
-                          "By singing up you are agree to term & \nconditions and privacy"),
+                    icon: Icons.person_sharp,
+                    text: "customer",
+                    text2: "By singing up you are agree to term & \nconditions and privacy",
+                  ),
                   const SizedBox(
                     height: 15,
                   ),
+                  // Second SignUp Widget for "Merchant"
                   const SignUpWiget(
-                      icon: Icons.storefront_sharp,
-                      text: "Marchant",
-                      text2:
-                          "By singing up you are agree to term & \nconditions and privacy"),
+                    icon: Icons.storefront_sharp,
+                    text: "Merchant",
+                    text2: "By singing up you are agree to term & \nconditions and privacy",
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
+                  // "Terms & Conditions" and "Privacy Policy" text
                   RichText(
                     textAlign: TextAlign.center,
                     text: const TextSpan(
@@ -62,8 +67,7 @@ class PageTwo extends StatelessWidget {
                         TextSpan(
                           text: "Terms & Conditions",
                           style: TextStyle(
-                            color: Colors
-                                .blue, // Change the color for Terms & Conditions
+                            color: Colors.blue, // Change the color for Terms & Conditions
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -71,8 +75,7 @@ class PageTwo extends StatelessWidget {
                         TextSpan(
                           text: "Privacy Policy",
                           style: TextStyle(
-                            color: Colors
-                                .blue, // Change the color for Privacy Policy
+                            color: Colors.blue, // Change the color for Privacy Policy
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -82,12 +85,14 @@ class PageTwo extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
+                  // "Continue" button
                   Container(
                     height: 55,
                     width: MediaQuery.of(context).size.width * 0.82,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Colors.red.shade400),
+                      borderRadius: BorderRadius.circular(25),
+                      color: Colors.red.shade400,
+                    ),
                     child: const Center(
                       child: Text(
                         "Continue",
@@ -98,6 +103,7 @@ class PageTwo extends StatelessWidget {
                   const SizedBox(
                     height: 12,
                   ),
+                  // "Joined us before? Login" text
                   RichText(
                     text: const TextSpan(
                       style: TextStyle(
